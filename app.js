@@ -19,7 +19,9 @@ readline.question('User name: ', function(username) {
             }
             else if ((! users) || (users.length == 0)) console.log('No users found.');
             else {
-                console.log(users);
+		users.map(user => {
+			console.log(user);
+		});
             }
             readline.close();
         });
